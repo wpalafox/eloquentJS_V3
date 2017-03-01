@@ -45,4 +45,3 @@ for (var n = 1; n <= 100; n++) {
 
 }
 
-//The author's solution won't handle cases where n is divible by 3 AND 5. 
