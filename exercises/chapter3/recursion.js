@@ -30,4 +30,18 @@ function isEven(number){
 
 //Author Solution
 
+function isEven(n) {
+  if (n == 0)
+    return true;
+  else if (n == 1)
+    return false;
+  else if (n < 0)
+    return isEven(-n);
+  else
+    return isEven(n - 2);
+}
+
+
+//The function calls itself until it decrements to 0 or 1, resulting in even or odd, respectively. 
+//If the number lands below zero then the function flips it back to positive.  
 
