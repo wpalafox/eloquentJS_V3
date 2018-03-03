@@ -4,16 +4,12 @@ including) end. */
 
 
 function range(num1,num2){ 
-
 	totalArray = [];
-
+	
 	for(i = num1;i <= num2; i++){
-		
 		totalArray.push(i); 
-		
 	}
-
-	console.log(totalArray);
+	return totalArray;
 } 
 
 range(4,7);
