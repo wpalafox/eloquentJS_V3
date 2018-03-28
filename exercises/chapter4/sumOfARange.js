@@ -12,12 +12,11 @@ function range(num1,num2){
 	return totalArray;
 } 
 
-range(4,7);
+/*Next, write a sum function that takes an array of numbers and 
+returns the sum of these numbers. Run the previous program 
+and see whether it does indeed return 55 */ 
 
-
-
-
-testArray = [0,4,6,7,8];
+testArray = (range(1,10));
 
 function sum(array) {
   var total = 0;
