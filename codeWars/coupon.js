@@ -22,76 +22,56 @@ function checkCoupon(argument){
 
 	console.log(eMM);
 
-
 	if(EMM == "Jan"){
-
 		NEMM = 01;
-
 	}else if(EMM == "Feb"){
-
 		NEMM = 02;
-
 	}else if(EMM == "Mar"){
-
 		NEMM = 03;
-
 	}else if(EMM == "Apr"){
-
 		NEMM = 04;
-
 	}else if(EMM == "May"){
-
 		NEMM = 05;
-
 	}else if(EMM == "Jun"){
-
 		NEMM = 06;
-
 	}else if(EMM == "Jul"){
-
 		NEMM = 07;
-
 	}else if(EMM == "Aug"){
-
 		NEMM = 08;
-
 	}else if(EMM == "Sep"){
-
 		NEMM = 09;
-
 	}else if(EMM == "Oct"){
-
 		NEMM = 10;
-
 	}else if(EMM == "Nov"){
-
 		NEMM = 11;
-
 	}else if(EMM == "Dec"){
-
 		NEMM = 12;
-
 	}
 	console.log(NEMM);
 
 //Extract Expiration Year
+
+
 expirationDate = 'October 1, 2014';
 
-for(i=expirationDate.length;i>expirationDate.length-4;i--){
+function seeYear(expirationDate){
 
-      EXY = [];
-      EXY.push(expirationDate[i]);
-
-
-  }
-console.log(EXY)
-
-valueTest = parseInt(expirationDate[14]);
-
-console.log(valueTest);
-VM2136:3 4
-
-
-
+		let  EXY = [];
+			for(i=expirationDate.length-1;i>expirationDate.length-5;i--){
+					EXY.push(parseInt(expirationDate[i]));
+				}
 
 }
+
+
+//Reverse the Year
+function rvrseArry(array){
+	let rvrseArry = [];
+	for(var i=array.length-1;i>=0;i--){
+
+		rvseArry.push(array[i])
+
+	}
+
+
+console.log(EXY)
