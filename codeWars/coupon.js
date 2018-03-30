@@ -1,14 +1,11 @@
 //Coupon Code Challenge
 
 
-function checkCoupon(argument){
-
 //Retrieve the current day
 	var today = new Date();
 	var dd = today.getDate();
 	var mm = today.getMonth();
 	var yy = today.getFullYear();
-
 	var Day = mm+"/"+dd+"/"+yy;
 
 	console.log(Day);
@@ -49,29 +46,37 @@ function checkCoupon(argument){
 	}
 	console.log(NEMM);
 
-//Extract Expiration Year
 
 
+
+//Extract Expiration Year from String 
 expirationDate = 'October 1, 2014';
+EXY = [];
+rvrsArry = [];
 
 function seeYear(expirationDate){
 
-		let  EXY = [];
-			for(i=expirationDate.length-1;i>expirationDate.length-5;i--){
-					EXY.push(parseInt(expirationDate[i]));
-				}
+	for(i=expirationDate.length-1;i>expirationDate.length-5;i--){
+		EXY.push(parseInt(expirationDate[i]));
+	}
+	
+	return EXY;
+}
 
+//Reverse the Year and Combine 
+function reverseArray(array){
+	
+	for(var i=array.length-1;i>=0;i--){
+		rvrsArry.push(array[i])
+	}
+	var yearNum = Number(rvrsArry.join(""));  
+
+	return yearNum;
 }
 
 
-//Reverse the Year
-function rvrseArry(array){
-	let rvrseArry = [];
-	for(var i=array.length-1;i>=0;i--){
-
-		rvseArry.push(array[i])
-
-	}
+//Run Program 
+seeYear(expirationDate);
+reverseArray(EXY);
 
 
-console.log(EXY)
