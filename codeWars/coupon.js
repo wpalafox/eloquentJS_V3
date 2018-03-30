@@ -12,12 +12,15 @@
 //Change the expiration date to the dd/mm/yyyy format
 
 //Extract the expiration Month and convert to corresponding number
-	expirationDate = 'October 1, 2014';
+expirationDate = 'October 1, 2014';
+
+function grabMonth(expirationDate){
+	
 	str = expirationDate;
 
 	EMM = str.charAt(0) +  str.charAt(1) + str.charAt(2)
 
-	console.log(eMM);
+	
 
 	if(EMM == "Jan"){
 		NEMM = 01;
@@ -44,9 +47,11 @@
 	}else if(EMM == "Dec"){
 		NEMM = 12;
 	}
-	console.log(NEMM);
+	return NEMM;
 
+}
 
+grabMonth(expirationDate);
 
 
 //Extract Expiration Year from String 
