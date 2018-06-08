@@ -1,7 +1,7 @@
 //Coupon Code Challenge
 
 //Extract the expiration Month and convert to corresponding number
-let expirationDate = 'July 1, 2014';
+let expirationDate = 'April 1, 2018';
 let exMonthNumber = [];
 
 function findMonthNumber(exDate){
@@ -52,7 +52,7 @@ function findMonthNumber(exDate){
 findMonthNumber(expirationDate);
 
 let a = parseInt(exMonthNumber);
-console.log(a);
+//console.log(a);
 
 
 
@@ -83,12 +83,11 @@ function reverseArray(array){
 	exYearNumber = yearNum;
 }
 
-
 //Run find year functions
 seeYear(expirationDate);
 reverseArray(EXY);
 let b = exYearNumber;
-console.log(b);
+//console.log(b);
 let exDayAndYear = a + "/" + b;
 //Expiration Month + Year
 console.log(exDayAndYear);
@@ -108,32 +107,32 @@ console.log(exDayAndYear);
 
 //Compare the expiration date and the current date
 
-function couponExpired?(exDateM, exDateY, currDateM, currDateY){
+function couponExpired1(exDateM, exDateY){
 
-	if(exDateY > currDateY){
+	//Retrieve the current day"
+		let today = new Date();
+		//var dd = today.getDate();
+		let mm = today.getMonth();
+		let yy = today.getFullYear();
+
+	if(exDateY > yy){
 		console.log("Coupon still valid :)")
-	}else if(exDateY < currDateY){
+	}else if(exDateY < yy){
 		console.log("Coupon Expired :(")
 
-	}else if(exDateY === currDateY){
-		if(exDateM > currDateM){
+	}else if(exDateY === yy){
+		if(exDateM > mm){
 			console.log("Coupon still valid :)")
-		}
+		}else if(exDateM < mm){
+			console.log("Coupon Expired :(")
 
-	}
+		}else if(exDateM == mm){
 
+			console.log("Coupon expiring soon!")
+		}else{console.log("Error")}
 
-
-
-
+	}else{console.log("Error")}
 }
 
 
-
-
-
-
-
-
-
-}
+couponExpired1(a, b);
