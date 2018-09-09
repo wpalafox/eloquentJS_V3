@@ -48,7 +48,7 @@ for( i = 0; i < 8; i++){
 
 //Author's solution
 
-for (var line = "#"; line.length < 8; line += "#")
+for (let line = "#"; line.length < 8; line += "#")
   console.log(line);
 
 //It's interesting how the for loop lacks brackets, yet it functions perfectly. 
