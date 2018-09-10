@@ -47,3 +47,29 @@ for(i=1; i<=size; i++){    //The outer loop produces every row
 	 board += "\n";   //This new line character separates the rows once all of the hashes and blanks are printed
 }
 console.log(board);
+
+
+//Updated Solution for Version 3 ; it's a function program now 
+
+function chessBoard(n){
+  let board="" 	
+  for(let i=1;i<=n;i++){
+    for(let j=1;j<=n;j++){
+	    
+       if((i+j)%2==0){
+		  board+="#"
+        }
+        else if((i+j)%2!==0){
+          board+=" "   
+        }
+        
+	}
+	board+="\n" 
+  }
+ console.log(board) 
+}
+
+chessBoard(8)
+
+
+

@@ -33,10 +33,13 @@ for(i=1;i<=100;i++){
 }
 
 
-//Author Solution 
+//Author Clever's Solution
+/*The author created an empty variable, and then added fizz and/or buzz
+to the output. Finally the author console.log'd the output OR n.   
+*/
 
-for (var n = 1; n <= 100; n++) {
-  var output = "";
+for (let n = 1; n <= 100; n++) {
+  let output = "";
   if (n % 3 == 0)
     output += "Fizz";
   if (n % 5 == 0)
