@@ -27,6 +27,19 @@ function isEven(number){
 	}
 
 
+//Version 3 solution with recursion
+
+// Your code here.
+function isEven(n){
+  if(n == 0){
+    return "True" 
+  }else if(n == 1){
+	return "False"
+  }else{
+	return isEven(n-2) 
+	}
+}
+
 
 //Author Solution
 

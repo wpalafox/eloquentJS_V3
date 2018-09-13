@@ -1,4 +1,7 @@
 
+//Program a function which finds a minimum 
+
+//Version 2 exercise 
 function min(number1,number2){
   result = 0;
 
@@ -13,4 +16,14 @@ function min(number1,number2){
     console.log(number1+" and "+number2+" are equal")
   }
 
+}
+
+//Version 3 
+
+function min(a, b){ 
+  if(a>b){
+    return b
+  }else{
+    return a 
+  }
 }
