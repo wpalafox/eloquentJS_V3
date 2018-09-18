@@ -7,14 +7,16 @@ as argument by reversing its elements. Neither may use the standard reverse meth
 
 
 
-function reverseArray(array){
+function reverseArray1(array){
+  let arrayReverse=[] 
+  for(i=-1;i<=array.length;i++){
+    arrayReverse.push(array.pop())
+  }
 
-  //somting happen here
+  return arrayReverse 
+
 
 }
-
-
-
 
 
 
