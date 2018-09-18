@@ -8,16 +8,18 @@ as argument by reversing its elements. Neither may use the standard reverse meth
 
 
 function reverseArray1(array){
-  let arrayReverse=[] 
+  let output=[] 
   for(i=-1;i<=array.length;i++){
-    arrayReverse.push(array.pop())
+    output.push(array.pop())
   }
 
-  return arrayReverse 
+  return output 
 
 
-}
 
+
+
+//https://stackoverflow.com/questions/40751207/javascript-reverse-an-array-without-using-reverse
 
 
 
