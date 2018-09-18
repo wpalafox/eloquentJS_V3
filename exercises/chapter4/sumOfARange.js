@@ -2,7 +2,15 @@
 
 /*Write a range function that takes two arguments, 
 start and end, and returns an array containing all 
-the numbers from start up to (and including) end.*/  
+the numbers from start up to (and including) end.
+
+As bonus, modify range function to take an optional third 
+argument that indicates the "step" value used when building 
+the array. If no step is given, then elements go up by increments
+of one. 
+*/ 
+
+
 
 function range(a,b, c){
 	ranger=[]
@@ -14,19 +22,29 @@ function range(a,b, c){
 		}
 	
 		
-	}else if(c){
-		//code to implement step value use
-		//how do I handle both positive and negative situations 
-		for(i=a;;i+c){
-			ranger.push(i)
+	}else if(Math.sign(c)==1){
+		for(i=a;i<=b;i+=c){
+			ranger.push(i) 
+        }
+		
+			
 
+	}else if(Math.sign(c)==-1){
+		for(i=a;i>=b;i+=c){
+			ranger.push(i) 
+        }
+			 
 
-		}
+     }else{console.log("Error")} 
 
 
 	return ranger
-	}
+
 }
+
+
+
+
 
 /*Next, write a sum function that takes an array of numbers and 
 returns the sum of these numbers. 
