@@ -32,7 +32,29 @@ function reverseArray1(array){
 reverseArray1(arrayTest)
 
 
+/*Trick is to swap the first and last elements, then the second and 
+second-to-last, and so on. You can do this by looping over half the length
+of the array (use Math.floor to round down- you don't need to touch the 
+middle element in an array with an odd number of elements) and swapping the
+element in an array with an odd number of elements.  
 
+*/
+
+//https://teamtreehouse.com/community/reversing-an-array-in-javascript
+//https://medium.com/@frontman/how-swap-two-values-without-temporary-variables-using-javascript-8bb28f96b5f6
+
+function reverseArrayInPlace(array){
+  //swap first and last elements
+  let a = array[0]
+  array[0] = array[array.length-1]
+  array[array.length-1]=a 
+
+  return array 
+
+}
+
+reverseArrayInPlace([1,2,3]) 
+(3) [3, 2, 1]
 
 
 
