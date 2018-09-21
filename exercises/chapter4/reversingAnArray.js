@@ -40,10 +40,13 @@ element in an array with an odd number of elements.
 
 */
 
+//Sources 
 //https://teamtreehouse.com/community/reversing-an-array-in-javascript
 //https://medium.com/@frontman/how-swap-two-values-without-temporary-variables-using-javascript-8bb28f96b5f6
+//https://stackoverflow.com/questions/40751207/javascript-reverse-an-array-without-using-reverse
 
-function reverseArrayInPlace(array){
+//First. built a function that simply swapped the first and last elements 
+function reverseArrayInPlace0(array){
   //swap first and last elements
   let a = array[0]
   array[0] = array[array.length-1]
@@ -53,26 +56,22 @@ function reverseArrayInPlace(array){
 
 }
 
-reverseArrayInPlace([1,2,3]) 
-(3) [3, 2, 1]
+/*Second, built a function that loops through half of the array and 
+starts the swapping at the ends and moves towards the middle  */
+function reverseArrayInPlace1(array){
+  //loop over half the length of the array 
+  for(i=0;i<(Math.floor(array.length/2));i++){
+        let a =array[i]
+        array[i] = array[array.length-1-i]
+        array[array.length-1-i]=a
+
+  }
+  return array 
+
+}
 
 
-
-/*simply go over the input array from front to back and use
-the unshift method on the new array to insert each element at its start.*/
-
-
-
-//https://stackoverflow.com/questions/40751207/javascript-reverse-an-array-without-using-reverse
-
-
-
-
-
-
-
-
-
+reverseArrayInPlace1([1,2,3,4,5,6,7,8,9]) 
 
 
 
@@ -83,16 +82,7 @@ the unshift method on the new array to insert each element at its start.*/
 
 
 
-
-
-
-
-
-
-
-
-
-
+//Version 2 
 
 
 
