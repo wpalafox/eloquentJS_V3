@@ -4,7 +4,7 @@ and reverseArrayInPlace. The first, reverseArray, takes an array as argument and
 produces a new array that has the same elements in the inverse order. The second,
 reverseArrayInPlace, does what the reverse method does: it modifies the array given
 as argument by reversing its elements. Neither may use the standard reverse method.*/
-
+//reverseArray
 arraytest=[1,2,3,4,5,6,7,8,9]
 
 function reverseArray0(array){
@@ -31,17 +31,12 @@ function reverseArray1(array){
 }
 reverseArray1(arrayTest)
 
+/*--------------------------------------------------------------------------*/
+
+//reverseArrayIn Place
 
 
 
-
-
-/*simply go over the input array from front to back and use
-the unshift method on the new array to insert each element at its start.*/
-
-
-
-//https://stackoverflow.com/questions/40751207/javascript-reverse-an-array-without-using-reverse
 
 
 
