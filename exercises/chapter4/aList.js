@@ -115,65 +115,7 @@ function nth(list, number){
 
 }
 
-/*Looks at the "tail" of the list and at the same time count down the index
-until it reaches zero, at which point it can return the value property of 
-the node looking it is looking at. */ 
 
-let objA = {here: {is: "an"}, object: 2};
-let objB = {here: {is: "an"}, object: 2}
-
-
-
-
-
-
-function deepEqual(a,b){
-  /*returns true only if they are the same value or are objects with the 
-  same properties*/
-  	//first test whether or not they are both real objects 
-  	let AisObj=false
-  	let BisObj=false
-
-
-  	if(typeof a == "object" && a!= null){
- 	  
- 	  console.log("A is an object")
- 	  AisObj=true
-	
-	}else{
-
-		console.log("Error- parameter B is not an object")
-
-	}
-
-
-
-	if(typeof b == "object" && b!= null){
-		console.log("B is an object")
-		BisObj=true
-
-	}else{
-
-		console.log("Error- parameter B is not an object")
-	}
-
-	/*Compare properties. Use Object.keys.  Need to test whether both objects
-	have the same set of property names and whether those properties have identical values. 
-
-	*/
-	if(AisObj && BisObj == true){
-
-		console.log("Both parameters are objects")
-
-		console.log(Object.keys(a))
-		console.log(Object.keys(b))
-
-	}
-
-}
-
-
-deepEqual(objA, objB)
 
 
 
