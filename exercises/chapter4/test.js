@@ -70,15 +70,26 @@ function deepEqual(a,b){
 			//Loops through the length of properties A (and B) which is 2.  
 			for(i=0;i<Object.keys(a).length; i++){
 				//compare property names 
-				if (Aprops[i] === Bprops[i]){
+				if (Aprops[i] == Bprops[i]){
 					//compare property values 
-					if(a[String(Aprops[i])] === b[String(Bprops[i])]){
+					//JSON.stringify works with two objects w/o methods and DOM nodes inside
+					if(JSON.stringify(a[String(Aprops[i])]) == JSON.stringify(b[String(Bprops[i])])){
 
-						console.log("iteration "+i+" is a match")
-
+						//console.log("iteration "+i+" is a match")
+						return true
 					}else{
-						//console.log("False triggered: (a[String(Aprops[i])] == b[String(Bprops[i])])")
+						//Keep digging into the object properties
+
+						//It pulls up the same object, but 
+						//console.log(a[String(Aprops[i])])
+						//console.log(b[String(Bprops[i])])
 						return false 
+					
+
+
+
+
+
 					}
 
 

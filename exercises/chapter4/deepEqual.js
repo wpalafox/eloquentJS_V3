@@ -1,10 +1,4 @@
-/*Looks at the "tail" of the list and at the same time count down the index
-until it reaches zero, at which point it can return the value property of 
-the node looking it is looking at. */ 
-
-//let objA = {here: {is: "an"}, object: 2};
-//let objB = {here: {is: "an"}, object: 2}
-
+let obj = {here: {is: "an"}, object: 2};
 
 
 
@@ -20,7 +14,7 @@ function deepEqual(a,b){
 
   	if(typeof a == "object" && a!= null){
  	  
- 	  console.log("A is an object")
+ 	  //console.log("A is an object")
  	  AisObj=true
 	
 	}else{
@@ -28,11 +22,8 @@ function deepEqual(a,b){
 		console.log("Error- parameter B is not an object")
 
 	}
-
-
-
 	if(typeof b == "object" && b!= null){
-		console.log("B is an object")
+		//console.log("B is an object")
 		BisObj=true
 
 	}else{
@@ -54,44 +45,62 @@ function deepEqual(a,b){
 		//console.log("A object property length is "+Object.keys(a).length)
 	
 		if(Object.keys(a).length == Object.keys(b).length){
-			console.log("Objects have the same property lengths")
+			//console.log("Objects have the same property lengths")
 			//Loop over the object's properties name to compare them
 			//Always confirm first that the other has a property by that name
-			Aprops = Object.keys(a)
-			Bprops = Object.keys(b)
-			
-
-			console.log(Aprops)
-			console.log(Bprops)
-
+			let Aprops = Object.keys(a)
+			let Bprops = Object.keys(b)
+				
+			/*
+			console.log("----KEYS-----")
 			console.log(Aprops[0])
-			console.log(a['here'])
-						
+			console.log(Aprops[1])
+			console.log(Bprops[0])
+			console.log(Bprops[1])
+			console.log("----KEYS-----")
+
+			console.log("-----VALUES-----")
+			console.log(a[String(Aprops[0])])
+			console.log(a[String(Aprops[1])])
+			console.log(b[String(Aprops[0])])	
+			console.log(b[String(Aprops[1])])		
+			console.log("---------VALUES--------")
+			*/
+
 			//Loops through the length of properties A (and B) which is 2.  
 			for(i=0;i<Object.keys(a).length; i++){
-				
+				//compare property names 
+				if (Aprops[i] == Bprops[i]){
+					//compare property values 
+					//JSON.stringify works with two objects w/o methods and DOM nodes inside
+					if(JSON.stringify(a[String(Aprops[i])]) == JSON.stringify(b[String(Bprops[i])])){
+
+						//console.log("iteration "+i+" is a match")
+						return true
+					}else{
+						//Keep digging into the object properties
+
+						//It pulls up the same object, but 
+						//console.log(a[String(Aprops[i])])
+						//console.log(b[String(Bprops[i])])
+						return false 
+					
 
 
-				if (Aprops[i] !== Bprops[i]){
-					console.log("A and B property names "+i+ " are not identical")
+
+
+
+					}
+
+
+
+				}else{
+					//console.log("False triggered: (Aprops[i] == Bprops[i])")
 					return false 
 
-				}else if(Aprops[i] == Bprops[i]){
-					console.log("A and B property names "+i+ " are identical")
-
-				}else{ 
-					console.log("Error")
-				}
-
-				if(a[Aprops[i]] !== b[Bprops[i]]){
-					return false
 
 				}
-
-
-
-				
-				
+			
 			}
 
 			return true 
@@ -107,9 +116,11 @@ function deepEqual(a,b){
 }
 
 
-let obj = {here: {is: "an"}, object: 2};
+
 console.log(deepEqual(obj, obj));
 // → true
 console.log(deepEqual(obj, {here: 1, object: 2}));
 // → false
 console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// -> true 
+
