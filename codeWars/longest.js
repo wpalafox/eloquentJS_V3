@@ -9,31 +9,27 @@ a = "abcdefghijklmnopqrstuvwxyz" longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 function longest(s1, s2) {
   // your code
-  //create two arrays with dinstinct letters
-  s1_array=[]
-  s2_array=[]
+  
+  s_array=[]
+ 
 
   for(i=0;i<s1.length;i++)
-    if (!s1_array.includes(s1[i])){
-      s1_array.push(s1[i])
-      s1_array.sort()
+    if (!s_array.includes(s1[i])){
+      s_array.push(s1[i])
+      s_array.sort()
 
     }
 
   for(i=0;i<s2.length;i++)
-    if (!s2_array.includes(s2[i])){
-      s2_array.push(s2[i])
-      s2_array.sort()
+    if (!s_array.includes(s2[i])){
+      s_array.push(s2[i])
+      s_array.sort()
 
     }
+    
+    return s_array.join('')
 
-    if(s1_array.length>s2_array.length){
-      return s1_array.join('')
-
-    }else{
-      return s2_array.join('')
-
-    }
+   
 }
 
 
