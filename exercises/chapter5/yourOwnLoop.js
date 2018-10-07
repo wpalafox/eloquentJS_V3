@@ -19,11 +19,13 @@ const morethan0 = (testArr) => {
 	const results=[]
 	
 	for(let i=0;i<testArr.length;i++){
+		
 		const number =testArr[i];
 
 		if(number>0){
-
+			
 			results.push(number)
+		
 		}
 
 	}
@@ -45,12 +47,39 @@ const morethan5 = (testArr) => {
 
 console.log(morethan5(testArr))
 
-/*
-function (value, test, body, update){
 
 
+//My solution so far
 
+function loop(value, test, body, update){
 
-
+	if (test(value)){
+	  
+      let newValue = (body(value))  //Should change value
+	  
+	  update(newValue) 
+	  
+      loop(newValue,test,body,update)
+		
+	}else{
+      
+      console.log("End")
+    } 
 }
-*/ 
+
+loop(3, n => n > 0, n => n - 1, console.log);
+
+//2,1,0
+
+
+//Book solution
+
+function loop1(start,test,update,body){
+  for(let value=start;test(value);value=update(value)){
+    
+  	body(value) 
+
+  }
+}
+
+loop1(3, n => n > 0, n => n - 1, console.log);
