@@ -9,17 +9,11 @@ method */
 
 function every(array, test){
   for(let i=0;i<array.length;i++){
-  	let counter=0
-  	if(test(array[i])){
-  		counter=+1
-  		//console.log(array[i]+" is less than 10")
-  	}else{
-  		return false
-
-  	}
   	
-
-  }
+  	if(!test(array[i])){
+  		return false
+  	}
+  	}
   return true 
 }
 
@@ -33,6 +27,13 @@ function every2(array, predicate){
 	}return true;
 
 } 
+/*To build every on top of some, we can apply
+Demorgan's laws, which state that a && b equals
+!(!a || !b). This can be generalized to arrays, 
+where all elements in the array match if there is 
+no element in the array that does not match
+*/
+
 
 function every1(array, test){
 
@@ -43,17 +44,18 @@ function every1(array, test){
 
 
 
-/*
+
 console.log(every([1, 3, 5], n => n < 10));
 // → true
 console.log(every([2, 4, 16], n => n < 10));
 // → false
 console.log(every([], n => n < 10));
 // → true
-*/
 
+/*
 console.log(every1([1, 3, 5], n => n < 10));
 // → true
 console.log(every1([2, 4, 16], n => n < 10));
 // → false
 console.log(every1([], n => n < 10));
+*/
