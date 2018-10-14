@@ -13,9 +13,9 @@ vaporeon.type = "water";
 vaporeon.speak("Willy")
 
 function makeEevee(type){
-	let eevee = Object.create(Eevee)
-	eevee.type = type;
-	return eevee; 
+  let eevee = Object.create(Eevee)
+  eevee.type = type;
+    return eevee; 
 
 }
 
