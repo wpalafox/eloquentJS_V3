@@ -50,8 +50,8 @@ class GroupIterator {
   /*Should have a property that tracks the current position in the group
   next() 
   Everytime next is called, it checks whether it is done and, if not,
-  past the current value and returns it.
-  */
+  past the current value and returns it. */
+  
   constructor(group){
     this.group = group;
     this.item = 0;
@@ -59,6 +59,7 @@ class GroupIterator {
   }
 
   next(){
+    //Checks whether the array has reached the end 
     if(this.item == this.group.array.length){
       return {done: true};
     }else{
