@@ -8,26 +8,24 @@ consecutive. Implement a function that determines whether a string that contains
 
 function isIsogram(str){
 
-  for(i=0; i< str.length; i++){
-    array=[]
-    if(array.length==0){
-      array.push(str[i])
-    }else if(array.includes(str[i])){
+  let string = str
+  console.log(string.length)
+  arr=[]
+
+  for(i=0; i< string.length; i++){
+
+    if(arr.includes(string[i])==false){
+      arr.push(string[i])
+    }else if(arr.includes(string[i]) || Number.isInteger(parseInt(string[i])))
+    {
       return false
-
-    }else{
-      array.push(str[i])
-
     }
+}
 
-
-
-
-  }
-
-
-return true 
-
-
+console.log(arr)
+return true
 
 }
+
+
+isIsogram("mo0se")
